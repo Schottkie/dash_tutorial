@@ -1,3 +1,38 @@
 {
-    "python.pythonPath": "c:\\Venvs\\dash_tutorial\\Scripts\\python.exe"
+    "python.pythonPath": "c:\\Venvs\\dash_tutorial\\Scripts\\python.exe",
+	"python.autoCompete.showAdvancedMembers": true,
+	"python.autoComplete.addBrackets": true,
+	"python.autoComplete.extraPath": [
+		"${workspaceFolder}",
+		"${workspaceFolder}/src",
+	],
+	"python.sortImport.args": [
+		"-rc",
+		"--atomic"
+	],
+	"python.linting.enabled": true,
+	"python.testing.unittestEnabled": true,
+	"python.testing.autoTestDiscoverOnSaveEnabled": true,
+	"python.testing.unittestArgs": [
+		"-v",
+		"-s",
+		"./src",
+		"-p",
+		"test_*.py"
+	],
+	"python.testing.pytesetEnabled": true,
+	"python.testing.nosetestEnabled": true,
+	"editor.rules": [79],
+	"editor.renderWhitespace": "all",
+	"editor.formatonSave": true,
+	"editor.autoIndent": "full",
+	"editor.codeLens": true,
+	"editor.lightbulb.enabled": true,
+	"editor.tabCompletion": "on",
+	"editor.quickSuggestions": {
+		"other": true,
+		"comments": true,
+		"strings": true,
+	},
+	
 }
