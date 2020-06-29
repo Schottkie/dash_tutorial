@@ -8,3 +8,7 @@ This repo has a variaty of tutorial for dash and plotly.
 
 -- 002_callbacks.py --
 - Introduction to callbacks and dash.dependencies (Input, Output, State)
+
+-- 003_graphs.py --
+- Introduction to dash_core_components
+- Our first Plot
