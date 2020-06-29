@@ -12,3 +12,8 @@ This repo has a variaty of tutorial for dash and plotly.
 -- 003_graphs.py --
 - Introduction to dash_core_components
 - Our first Plot
+
+-- 004_plotly_css.py --
+- Introduction plotly
+- Using px, go and pandas df
+- Using css in dash
