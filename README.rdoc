@@ -1,0 +1,7 @@
+--- Dash tutorial ---
+
+This repo has a variaty of tutorial for dash and plotly.
+
+-- 001.dash.py --
+- First dash app. Only containing "hello_world".
+- Using dash_html_components
