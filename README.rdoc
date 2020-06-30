@@ -20,3 +20,7 @@ This repo has a variaty of tutorial for dash and plotly.
 
 -- 005_style_plot.py --
 - TODO
+
+-- 006_dropdown.py --
+- First part of world population indicator project
+- Introduction to dcc.Dropdwon
