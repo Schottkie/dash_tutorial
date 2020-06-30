@@ -2,10 +2,6 @@
     "python.pythonPath": "c:\\Venvs\\dash_tutorial\\Scripts\\python.exe",
 	"python.autoCompete.showAdvancedMembers": true,
 	"python.autoComplete.addBrackets": true,
-	"python.autoComplete.extraPath": [
-		"${workspaceFolder}",
-		"${workspaceFolder}/src",
-	],
 	"python.sortImport.args": [
 		"-rc",
 		"--atomic"
