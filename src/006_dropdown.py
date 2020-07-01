@@ -9,7 +9,7 @@ from dash.dependencies import Input, Output, State
 external_stylesheets = ['src/assets/stlesheet.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 #https://population.un.org/wpp/Download/Standard/CSV/
-data = pd.read_csv('src/assets/data.csv')
+data = pd.read_csv('./assets/data.csv')
 
 app.layout = html.Div([
     html.H1('World population indicators', id='header'),
