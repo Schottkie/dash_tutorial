@@ -24,3 +24,7 @@ This repo has a variaty of tutorial for dash and plotly.
 -- 006_dropdown.py --
 - First part of world population indicator project
 - Introduction to dcc.Dropdwon
+
+-- 007_checklist.py --
+- First part of world population indicator project
+- Life expectation chooseable via dcc.Checklist
