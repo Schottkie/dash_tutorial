@@ -26,5 +26,9 @@ This repo has a variaty of tutorial for dash and plotly.
 - Introduction to dcc.Dropdwon
 
 -- 007_checklist.py --
-- First part of world population indicator project
+- Second part of world population indicator project
 - Life expectation chooseable via dcc.Checklist
+
+-- 008_rangeSlider.py --
+- Third part of world population indicator project
+- X-axis range updateable via dcc.rangeSlider

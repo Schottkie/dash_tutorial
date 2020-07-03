@@ -21,22 +21,28 @@ app.layout = html.Div([
         {'label': 'Female life expectancy at birth (years)', 'value': 'LExFemale'}
     ]),
     dcc.Graph(id='plot_lex'),
+    dcc.RangeSlider(id='rangeslider_lex', min=0, max=29, step=1, value=[0,29],
+                    allowCross=False, updatemode='drag',
+                    marks={i: '{}'.format(time) for i, time in enumerate(data['MidPeriod'].unique())})
 ])
 
 @app.callback(
     Output('plot_lex', 'figure'),
     [Input('checklist_indicators', 'value'),
-    Input('dropdown_countries', 'value')]
+     Input('dropdown_countries', 'value'),
+     Input('rangeslider_lex', 'value')]
 )
-def show_selected_country(checklist_indicators_value, dropdown_countries_value):
+def show_selected_country(checklist_indicators_value, dropdown_countries_value, rangeslider_lex_value):
     fig = go.Figure()
     if checklist_indicators_value is None or dropdown_countries_value is None:
         return fig
     for country in dropdown_countries_value:
         df_country = data.loc[data['Location'] == country]
+        df_country = df_country.iloc[rangeslider_lex_value[0]:rangeslider_lex_value[1], :]
         for indicator in checklist_indicators_value:
-            fig.add_trace(go.Scatter(x=df_country['Time'], y=df_country[indicator], name=country + " " + indicator))
+            fig.add_trace(go.Scatter(x=df_country['MidPeriod'], y=df_country[indicator], name=country + " " + indicator))
     return fig
+
 
 
 if __name__ == "__main__":
