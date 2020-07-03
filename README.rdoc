@@ -32,3 +32,7 @@ This repo has a variaty of tutorial for dash and plotly.
 -- 008_rangeSlider.py --
 - Third part of world population indicator project
 - X-axis range updateable via dcc.rangeSlider
+
+-- 009_subplots.py --
+- Fourth part of world population indicator project
+- Subplot of births and deaths
