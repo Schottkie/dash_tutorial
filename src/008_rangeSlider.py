@@ -12,14 +12,20 @@ data = pd.read_csv('./assets/data.csv')
 
 app.layout = html.Div([
     html.H1('World population indicators', id='header'),
-    dcc.Dropdown(id='dropdown_countries', multi=True, options=[
-        {'label': country, 'value': country} for country in data['Location'].unique()
-    ]),
+    dcc.Dropdown(id='dropdown_countries', multi=True,
+                 options=[
+                    {'label': country, 'value': country} for country in data['Location'].unique()
+                ],
+                value=['Germany']
+    ),
     dcc.Checklist(id='checklist_indicators', options=[
         {'label': 'Life expectancy at birth for both sexes combined (years)', 'value': 'LEx'},
         {'label': 'Male life expectancy at birth (years)', 'value': 'LExMale'},
         {'label': 'Female life expectancy at birth (years)', 'value': 'LExFemale'}
-    ]),
+    ],
+                  inputStyle={"margin-right": "15px", "margin-top": "10px"},
+                  style={"padding": "20px"},
+                  value=['LEx']),
     dcc.Graph(id='plot_lex'),
     dcc.RangeSlider(id='rangeslider_lex', min=0, max=29, step=1, value=[0,29],
                     allowCross=False, updatemode='drag',
@@ -41,6 +47,7 @@ def show_selected_country(checklist_indicators_value, dropdown_countries_value, 
         df_country = df_country.iloc[rangeslider_lex_value[0]:rangeslider_lex_value[1], :]
         for indicator in checklist_indicators_value:
             fig.add_trace(go.Scatter(x=df_country['MidPeriod'], y=df_country[indicator], name=country + " " + indicator))
+    fig.update_layout(showlegend=True)
     return fig
 
 
